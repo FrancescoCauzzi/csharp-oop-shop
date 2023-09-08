@@ -12,6 +12,7 @@
             Console.WriteLine($"The product gross price is: {hairdryer.GetGrossPrice()}");
             Console.WriteLine($"The extended name of the product is: {hairdryer.GetFullName()}");
 
+            // Bonus 2
             Product refrigerator = new Product("Refrigerator", "A kitchen appliance for cooling and preserving food", 799.99M, 0.22M);
             Product washingMachine = new Product("Washing Machine", "An appliance for cleaning clothes automatically", 499.99M, 0.22M);
             Product microwaveOven = new Product("Microwave Oven", "A kitchen appliance for heating food quickly", 149.99M, 0.22M);
@@ -28,6 +29,8 @@
                 Console.WriteLine($"{index}. {shopProduct.Name} with code: {Product.PadProductCode(shopProduct.ProductCode)}");
                 index++;
             }
+
+
 
 
 
