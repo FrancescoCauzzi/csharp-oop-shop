@@ -76,7 +76,7 @@ namespace csharp_oop_shop
         public decimal GetGrossPrice()
         {
             decimal grossPrice = this.Price + (this.Price * this.Vat); ;
-            return grossPrice;
+            return Math.Round(grossPrice, 2);
         }
 
         public string GetFullName()
