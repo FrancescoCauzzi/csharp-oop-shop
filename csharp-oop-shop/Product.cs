@@ -44,7 +44,8 @@ namespace csharp_oop_shop
         public int ProductCode
         {
             get { return _productCode; }
-            set { _productCode = value; }
+            // the product code is readonly
+            // set { _productCode = value; }
 
         }
 
@@ -84,9 +85,6 @@ namespace csharp_oop_shop
         {
             return $"{this.ProductCode}{this.Name}";
         }
-
-
-
 
     }
 }
