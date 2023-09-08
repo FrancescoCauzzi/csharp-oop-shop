@@ -23,7 +23,7 @@ namespace csharp_oop_shop_bonus
         public Product(string name, string description, decimal price, decimal vat)
         {
             Random random = new Random();
-            this._productCode = random.Next(10000000, 100000000);
+            this._productCode = random.Next(0, 1000000);
             this._name = name;
             this._description = description;
             this._price = price;
@@ -34,7 +34,8 @@ namespace csharp_oop_shop_bonus
         public int ProductCode
         {
             get { return _productCode; }
-            set { _productCode = value; }
+            // the product code is readonly
+            // set { _productCode = value; }
 
         }
 
@@ -71,7 +72,15 @@ namespace csharp_oop_shop_bonus
 
         public string GetFullName()
         {
-            return $"{this.ProductCode}{this.Name}";
+            return $"{this.PadProductCode(this.ProductCode)}{this.Name}";
+        }
+
+        // bonus: create un metodo che restituisca il codice con un pad left di 0 per arrivare a 8 caratteri (ad esempio codice 91 diventa 00000091, mentre codice 12344556 resta come è
+        public string PadProductCode(int code)
+        {
+            string codeString = code.ToString();
+            string paddedCodeString = codeString.PadLeft(8, '0');
+            return paddedCodeString;
         }
 
 
