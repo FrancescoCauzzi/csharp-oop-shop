@@ -1,21 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_oop_shop
+namespace csharp_oop_shop_bonus
 {
-    /*
-        Un prodotto è caratterizzato da:
-        codice (numero intero)
-        nome
-        descrizione
-        prezzo
-        iva
-        */
-
     public class Product
     {
         // private fields
@@ -73,7 +63,6 @@ namespace csharp_oop_shop
             set { _vat = value; }
         }
 
-        // Methods
         public decimal GetGrossPrice()
         {
             decimal grossPrice = this.Price + (this.Price * this.Vat); ;
